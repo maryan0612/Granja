@@ -8,13 +8,19 @@ public class MovimientoJugador : MonoBehaviour
     public Vector2 entrada;
      Rigidbody2D rb;
     public float velocidad = 5f;
+<<<<<<< HEAD
     private Animator animator;
+=======
+>>>>>>> f4b52ad1ac93583a5211e05dd6396392484907c4
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+<<<<<<< HEAD
         animator = GetComponent<Animator>();
+=======
+>>>>>>> f4b52ad1ac93583a5211e05dd6396392484907c4
     }
 
     // Update is called once per frame
@@ -23,6 +29,7 @@ public class MovimientoJugador : MonoBehaviour
         rb.linearVelocity = velocidad * entrada;
     }
 
+<<<<<<< HEAD
 
     public void Movimiento(InputAction.CallbackContext Contexto)
     {
@@ -54,6 +61,17 @@ public class MovimientoJugador : MonoBehaviour
         if (Contexto.canceled){
             animator.SetBool("estaCaminando", false);
         }
+=======
+  
+    public void Movimiento(InputAction.CallbackContext contexto) {
+        //Debug.Log("Contexto" + contexto);
+
+
+        entrada = contexto.ReadValue<Vector2>();
+        Debug.Log("contexto" + entrada);
+
+
+>>>>>>> f4b52ad1ac93583a5211e05dd6396392484907c4
     }
 
     
